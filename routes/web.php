@@ -11,11 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/about', function () {
-    $nama = "Wahyu Syahputra";
-    return view('about', ['nama' => $nama]);
-});
+// Route::get('/about', function () {
+//     $nama = "Wahyu Syahputra";
+//     return view('about', ['nama' => $nama]);
+// });
+
+Route::get('/','PagesController@home');
+Route::get('/about','PagesController@about');
+
+Route::get('/anime','AnimeController@index');
